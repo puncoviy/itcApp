@@ -12,7 +12,9 @@ function App() {
             <div className="container">
                 <section className="main">
                     <MainNav />
-                    <Profile />
+                    <div className="main__content">
+                        <Profile />
+                    </div>
                 </section>
             </div>
         </div>

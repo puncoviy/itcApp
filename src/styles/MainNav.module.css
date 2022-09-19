@@ -1,0 +1,23 @@
+/* NAVIGATION */
+
+nav {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav__item_link {
+    color: inherit;
+    text-decoration-color: transparent;
+    transition: text-decoration-color .5s;
+}
+
+.nav__item_link:hover {
+    text-decoration-color: black;
+}

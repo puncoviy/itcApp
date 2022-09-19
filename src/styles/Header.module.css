@@ -1,0 +1,16 @@
+/* HEADER */
+
+.header {
+    max-height: 100px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 80px;
+}
