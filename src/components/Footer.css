@@ -1,0 +1,16 @@
+.footer {
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.footer__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+.footer__item {
+    text-decoration: none;
+}
