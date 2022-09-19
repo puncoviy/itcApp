@@ -28,23 +28,25 @@
     justify-content: space-between;
     gap: 10px;
 }
+
 .main__nav {
     border: 1px solid grey;
     border-radius: 10px;
     padding: 10px;
 }
+
 .main__nav-list {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.main__nav-item {
-}
+
 .main__nav-item--link {
     color: inherit;
     text-decoration-color: transparent;
     transition: text-decoration-color .5s;
 }
+
 .main__nav-item--link:hover {
     text-decoration-color: black;
 }
@@ -83,12 +85,15 @@
     flex-direction: column;
     gap: 5px;
 }
+
 .profile__name {
     font-size: 20px;
 }
+
 .profile__birth {
     font-size: 14px;
 }
+
 .profile__location {
     font-size: 14px;
 }
