@@ -1,9 +1,13 @@
 import React from 'react';
+import Posts from './Posts';
 import ProfileInfo from './ProfileInfo';
 
 const Profile = () => {
     return (
-        <ProfileInfo />
+        <div>
+            <ProfileInfo />
+            <Posts />
+        </div>
     );
 }
 

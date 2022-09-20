@@ -8,7 +8,7 @@ const ProfileInfo = () => {
             <div className={classes.box}>
                 <img className={classes.avatar} src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="profile-avatar" />
                 <div className={classes.info}>
-                    <p className={classes.name}>Dmitriy K</p>
+                    <p className={classes.name}>Lora K</p>
                     <p className={classes.birth}>17 March 1990</p>
                     <p className={classes.location}>Rostov-on-Don, Russia</p>
                 </div>
