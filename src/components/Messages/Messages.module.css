@@ -1,0 +1,72 @@
+.messages {
+    display: flex;
+    gap: 15px;
+}
+
+.users {
+    flex-grow: 1;
+    border-right: 1px solid grey;
+}
+
+.usersList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.usersItem {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color .5s;
+}
+
+.usersItem:hover {
+    text-decoration-color: inherit;
+}
+
+.messagesBox {
+    flex-grow: 5;
+}
+
+.messageList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.messageItem {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 20px 20px 20px 0;
+    max-width: 400px;
+}
+
+.messageItem.received {
+
+}
+
+.messageItem.sent {
+    margin-left: auto;
+    border-radius: 20px 20px 0 20px;
+}
+
+.newMessage {
+    display: flex;
+}
+
+.input {
+    display: block;
+    flex-grow: 1;
+    height: 50px;
+    resize: none;
+    outline: grey;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 5px;
+    width: 100px;
+}
