@@ -13,7 +13,9 @@ const Post = (props) => {
                     {props.date}
                 </p>
             </div>
-            <p className={classes.text}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae ipsa accusamus eius rem maiores culpa cum tempore qui accusantium. Eum.</p>
+            <p className={classes.text}>
+                {props.text}
+            </p>
         </div>
     );
 }

@@ -5,6 +5,7 @@
 
 .users {
     flex-grow: 1;
+    max-width: 260px;
     border-right: 1px solid grey;
 }
 
@@ -16,6 +17,7 @@
 
 .usersItem {
     cursor: pointer;
+    color: inherit;
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: text-decoration-color .5s;
