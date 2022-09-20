@@ -30,28 +30,31 @@ const User = (props) => {
 const UserMessages = [
     {
         id: 1,
+        sender: 'remote',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
     },
     {
         id: 2,
+        sender: 'local',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
     },
     {
         id: 3,
+        sender: 'remote',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
     }
 ]
 
 const Message = (props) => {
     return (
-        <li className={classes.messageItem}>{props.text}</li>
+        <li className={props.sender == 'remote' ? classes.messageReceived : classes.messageSent}>{props.text}</li>
     )
 }
 
 const Messages = (props) => {
 
     const UserName = Users.map(users => <User key={'user' + users.id} name={users.name} id={users.id} />)
-    const UserMessage = UserMessages.map(message => <Message key={'message' + message.id} text={message.text} />)
+    const UserMessage = UserMessages.map(message => <Message key={'message' + message.id} text={message.text} sender={message.sender} />)
 
     return (
         <div className={classes.messages}>
