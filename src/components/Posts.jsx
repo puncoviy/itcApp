@@ -8,8 +8,8 @@ const Posts = () => {
         <div>
             <NewPost />
             <div className={classes.postlist}>
-                <Post />
-                <Post />
+                <Post name='Lora K' date='20.09.2022 11:00' />
+                <Post name='Lora K' date='20.09.2022 11:00' />
             </div>
         </div>
     );

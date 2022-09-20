@@ -18,6 +18,10 @@
     transition: text-decoration-color .5s;
 }
 
+.active {
+    text-decoration-color: inherit;
+}
+
 .nav__item_link:hover {
     text-decoration-color: black;
 }
