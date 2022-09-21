@@ -6,8 +6,8 @@ let state = {
             id: 1,
             name: 'Lora K',
             date: '20.09.2022 11:00',
-            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae ipsa accusamus eius rem maiores culpa cum tempore qui accusantium. Eum.'
-    
+            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae ipsa accusamus eius rem maiores culpa cum tempore qui accusantium. Eum.',
+
         },
         {
             id: 2,
@@ -23,7 +23,8 @@ let state = {
             text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae ipsa accusamus eius rem maiores culpa cum tempore qui accusantium. Eum.'
     
         }
-    ], 
+    ],
+    newPostValue: '' ,
     Users: [
         {
             id: 1,
@@ -63,12 +64,17 @@ let state = {
 
 export let addPost = (postText) => {
     let newPost = {
-        id: 5,
+        id: Math.random(),
         name: 'Lora K',
         date: '20.09.2022 11:00',
         text: postText
     };
     state.AllPosts.push(newPost);
+    reRender(state);
+}
+
+export let updateNewPostText = (newText) => {
+    state.newPostValue = newText;
     reRender(state);
 }
 

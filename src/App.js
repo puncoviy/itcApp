@@ -23,6 +23,8 @@ function App(props) {
                                 <Route path='/profile' element={<Profile
                                     AllPosts={props.state.AllPosts}
                                     addPost={props.addPost}
+                                    newPostValue={props.state.newPostValue}
+                                    updateNewPostText={props.updateNewPostText}
                                 />} />
                                 <Route path='/messages/*' element={<Messages
                                     Users={props.state.Users}
