@@ -20,8 +20,8 @@ function App(props) {
                         <MainNav />
                         <div className="main__content">
                             <Routes>
-                                <Route path='/profile' element={<Profile AllPosts={props.AllPosts} />} />
-                                <Route path='/messages/*' element={<Messages Users={props.Users} UserMessages={props.UserMessages} />} />
+                                <Route path='/profile' element={<Profile AllPosts={props.state.AllPosts} />} />
+                                <Route path='/messages/*' element={<Messages Users={props.state.Users} UserMessages={props.state.UserMessages} />} />
                                 <Route path='/news' element={<News />} />
                                 <Route path='/music' element={<Music />} />
                                 <Route path='/settings' element={<Settings />} />
