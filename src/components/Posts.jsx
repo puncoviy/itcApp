@@ -7,7 +7,7 @@ const Posts = (props) => {
     const PostList = props.AllPosts.map(post => <Post key={'post' + post.id} name={post.name} date={post.date} text={post.text} />)
     return (
         <div>
-            <NewPost />
+            <NewPost addPost={props.addPost} />
             <div className={classes.postlist}>
                 {PostList}
             </div>

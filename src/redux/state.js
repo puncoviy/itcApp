@@ -1,3 +1,5 @@
+import { reRender } from "../render";
+
 let state = {
     AllPosts: [
         {
@@ -57,6 +59,17 @@ let state = {
             text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
         }
     ]
+}
+
+export let addPost = (postText) => {
+    let newPost = {
+        id: 5,
+        name: 'Lora K',
+        date: '20.09.2022 11:00',
+        text: postText
+    };
+    state.AllPosts.push(newPost);
+    reRender(state);
 }
 
 export default state;
