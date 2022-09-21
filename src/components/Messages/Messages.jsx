@@ -2,48 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './Messages.module.css';
 
-const Users = [
-    {
-        id: 1,
-        name: 'Victor'
-    },
-    {
-        id: 2,
-        name: 'Pavel'
-    },
-    {
-        id: 3,
-        name: 'Petr'
-    },
-    {
-        id: 4,
-        name: 'Olga'
-    }
-]
-
 const User = (props) => {
     return (
         <NavLink to={'/messages/' + props.id} className={el => el.isActive ? classes.active : classes.usersItem}>{props.name}</NavLink>
     )
 }
-
-const UserMessages = [
-    {
-        id: 1,
-        sender: 'remote',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
-    },
-    {
-        id: 2,
-        sender: 'local',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
-    },
-    {
-        id: 3,
-        sender: 'remote',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, aut!'
-    }
-]
 
 const Message = (props) => {
     return (
@@ -53,8 +16,8 @@ const Message = (props) => {
 
 const Messages = (props) => {
 
-    const UserName = Users.map(users => <User key={'user' + users.id} name={users.name} id={users.id} />)
-    const UserMessage = UserMessages.map(message => <Message key={'message' + message.id} text={message.text} sender={message.sender} />)
+    const UserName = props.Users.map(users => <User key={'user' + users.id} name={users.name} id={users.id} />)
+    const UserMessage = props.UserMessages.map(message => <Message key={'message' + message.id} text={message.text} sender={message.sender} />)
 
     return (
         <div className={classes.messages}>

@@ -10,7 +10,7 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
-function App() {
+function App(props) {
     return (
         <BrowserRouter>
             <div className="App">
@@ -20,8 +20,8 @@ function App() {
                         <MainNav />
                         <div className="main__content">
                             <Routes>
-                                <Route path='/profile' element={<Profile />} />
-                                <Route path='/messages/*' element={<Messages />} />
+                                <Route path='/profile' element={<Profile AllPosts={props.AllPosts} />} />
+                                <Route path='/messages/*' element={<Messages Users={props.Users} UserMessages={props.UserMessages} />} />
                                 <Route path='/news' element={<News />} />
                                 <Route path='/music' element={<Music />} />
                                 <Route path='/settings' element={<Settings />} />
