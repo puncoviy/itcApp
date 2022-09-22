@@ -43,12 +43,14 @@
     border: 1px solid grey;
     border-radius: 20px 20px 20px 0;
     max-width: 400px;
+    word-wrap: break-word;
 }
 
 .messageSent {
     padding: 10px;
     border: 1px solid grey;
     max-width: 400px;
+    word-wrap: break-word;
     border-radius: 20px 20px 0 20px;
     margin-left: auto;
 }
