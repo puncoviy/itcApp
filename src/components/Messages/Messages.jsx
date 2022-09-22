@@ -16,13 +16,28 @@ const Message = (props) => {
 
 const Messages = (props) => {
 
-    const UserName = props.Users.map(users => <User key={'user' + users.id} name={users.name} id={users.id} />)
-    const UserMessage = props.UserMessages.map(message => <Message key={'message' + message.id} text={message.text} sender={message.sender} />)
     let newMessageElement = React.createRef();
-    const sendMessage = () => {
+    let addMessage = () => {
         let newMessageText = newMessageElement.current.value;
-        console.log(newMessageText)
+        props.addMessage(newMessageText);
+        newMessageElement.current.value = '';
     }
+
+    const UserName = props.Users.map(user => <User
+        key={'user' + user.id}
+        name={user.name}
+        id={user.id}
+        UserMessages={user.UserMessages} />)
+    const UserMessage = props.UserMessages.map(message => <Message key={'message' + message.id} text={message.text} sender={message.sender} />)
+    // const UserMessageUpd = props.Users.map(dialog => {
+    //     dialog.UserMessages.map(
+    //         message =>
+    //         {console.log(message);
+    //         <Message key={'message' + message.id}
+    //             text={message.text}
+    //             sender={message.sender} />}
+    //     )
+    // });
 
     return (
         <div className={classes.messages}>
@@ -33,11 +48,16 @@ const Messages = (props) => {
             </div>
             <div className={classes.messagesBox}>
                 <ul className={classes.messageList}>
+                    {/* {UserMessageUpd} */}
                     {UserMessage}
                 </ul>
                 <div className={classes.newMessage}>
-                    <textarea className={classes.input} ref={newMessageElement} placeholder='Enter your message'></textarea>
-                    <button className={classes.btn} onClick={sendMessage}>Send</button>
+                    <textarea
+                        className={classes.input}
+                        ref={newMessageElement}
+                        placeholder='Enter your message'></textarea>
+                    <button className={classes.btn}
+                        onClick={addMessage}>Send</button>
                 </div>
             </div>
         </div>
